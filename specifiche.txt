@@ -1,0 +1,53 @@
+Babelscape BootcampJS 2021 - Specifiche progetto
+============================================
+
+In questo documento troverete tutte le specifiche del progetto. 
+
+Babelscape ATM
+============================================
+
+Il cliente Babelscape Bank ha richiesto di sviluppare un pannello per gestire le operazioni bancarie tramite ATM. 
+
+L'interfaccia web dovrà consentire ad utente di poter effettuare operazioni basilari:
+- estratto conto
+- ritiro
+- deposito
+
+Le tre operazioni potranno essere effettuate solo se in possesso di una carta di credito e solo se:
+- la carta di credito è valida, ovvero presente nel database della banca
+- la carta di credito non è scaduta
+- il pin digitato è valido per la carta di credito 
+
+Tuttavia il cliente non ha fornito alcun mockup, quindi sarete voi a progettare e implementare l'intero pannello. Sono stati forniti dei piccoli asset
+che troverete nella directory src/assets/ che potrebbero essere utili.
+
+
+Documentazione tecnica API
+============================================
+
+è possibile accedere al database della banca attraverso le API implementate nella classe ATMService. Le API utilizzano una tecnologia molto potente di javascript chiamata
+RxJS. Sostanzialmente ci mette a disposizione tantissime funzionalità per gestire le richieste asincrone. 
+
+Come funziona? 
+Molto complesso, ma per questo progetto utilizzeremo una funzionalità molto semplice. Vediamola con un esempio. 
+
+Supponiamo di voler recuperare la lista delle carte di credito:
+
+ATMService.getInstance().getCreditCardList()
+
+Questo metodo ritorna un oggetto Observable<CreditCard[]>, ovvero un oggetto utilizzato per la gestione asincrona del flusso di un app, il cui contenuto consiste di una lista di
+oggetti di tipo CreditCard. 
+
+Per accedere al contenuto di un Observable basta fare la sottoscrizione, ovvero chiamare il metodo subscribe(); Nell'esempio la lista delle cartae di credito è stampata sulla console:
+
+ATMService.getInstance()
+    .getCreditCardList()
+    .subscribe(
+        list => 
+        {
+            console.log("Lista delle carte di credito", list);
+        });
+
+Nel file main.ts ho inserito qualche chiamata di esempio. Per vederne il risultato basta lanciare il progetto con il comando npm run start
+
+Attenzione! Senza eseguire la subscribe, non è possibile recuperare le info in merito al contenuto dell'observable.

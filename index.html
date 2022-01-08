@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/babelscape-atm.min.css">
+        <script src="babelscape-atm.js"></script>
+    </head>
+    <body>       
+        <div class="container">
+
+            <div class="login-form submenu">
+                <h1>BabelscapeATM</h1>
+                <p>Numero Carta</p>
+                <input type="text" placeholder="Card Number" id="card-number">
+                <p>PIN</p>
+                <input type="password" placeholder="PIN" id="card-pin">
+            </div>
+
+            <div class="menu-container submenu">
+                <h2>Seleziona l'operazione</h2>
+            </div>
+
+            <div class="options-container">
+                <div class="deposit-container submenu">
+                    <h2>Inserisci l'importo da depositare</h2>
+                    <input type="text" placeholder="Importo..." id="deposit-amount">
+                </div>
+                
+                <div class="submenu withdraw-container">
+                    <h2>Seleziona l'importo da prelevare</h2>
+                    <div class="withdraw-options">
+                        <img class="withdraw-option" id="5-euro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/5-Euro.svg/320px-5-Euro.svg.png">
+                        <img class="withdraw-option" id="10-euro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/10-Euro.svg/320px-10-Euro.svg.png">
+                        <br>
+                        <img class="withdraw-option" id="20-euro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/20-Euro.svg/320px-20-Euro.svg.png">
+                        <img class="withdraw-option" id="50-euro" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/50-Euro.svg/320px-50-Euro.svg.png">
+                    </div>
+                    <div class="withdraw-custom-amount">
+                        <p>Importo personalizzato</p>
+                        <input type="text" placeholder="Importo..." id="withdraw-amount">
+                    </div>
+                    
+                </div>
+
+                <div class="balance-container submenu">
+                    <h2>Il saldo disponibile e' di:</h2>
+                    <h1 id="balance"></h1>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </body>
+</html>

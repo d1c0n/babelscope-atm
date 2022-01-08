@@ -1,0 +1,121 @@
+*
+{
+    box-sizing: border-box;
+}
+
+html,
+body
+{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1;
+    font-size: 24px;
+}
+
+h1
+{
+    font-size: 62px;
+}
+
+p
+{
+    font-size: 32px;
+}
+
+h2
+{
+    font-size: 56px;
+}
+
+.container
+{
+    position: relative;
+    text-align: center;
+}
+
+.submenu
+{
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 60px;
+
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 600px;
+
+    p
+    {
+        margin: 0 0 20px 0;
+    }
+
+    input
+    {
+        box-sizing: border-box;
+        margin: 0 0 20px 0;
+        padding: 10px;
+        border: 0px;
+        border-bottom: 1px solid;
+
+        &:focus
+        {
+            border: 0px;
+            outline: none;
+            border-bottom: 2px solid #1473E6;
+            font-style: italic;
+        }
+
+    }
+
+}
+
+.logout
+{
+    position: absolute;
+    top: -45px;
+    right: 30px;
+}
+.back
+{
+    position: absolute;
+    top: -45px;
+    left: 30px;
+}
+    
+.menu-container
+{
+    display: none;
+}
+
+.withdraw-container
+{
+    display: none;
+    max-width: 900px;
+}
+
+.deposit-container
+{
+    display: none;
+}
+
+.balance-container
+{
+    display: none;
+}
+
+.options-container
+{
+    position: inherit;
+}
+
+.withdraw-option
+{
+    margin: 25px;
+    transition: all .2s ease-in-out;
+
+    &:hover
+    {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}

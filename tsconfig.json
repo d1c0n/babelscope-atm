@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es5",  
+      "module": "commonjs",
+      "outDir": "dist/",
+      "strict" : false,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "downlevelIteration" : true,
+      "lib": ["es5", "es2015.promise", "dom", "es2015", "es6", "es2017"],
+    },
+    "include": [
+      "*", "src/"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
